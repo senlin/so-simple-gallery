@@ -11,9 +11,11 @@ With the SO Simple Gallery plugin you can add a beautiful gallery to your Posts 
 
 Inspired by a [LinkedIn discussion](https://www.linkedin.com/groupItem?view=&gid=154024&type=member&item=5867588708181516289) and the [Simple CSS Roll-over Image Gallery tutorial](http://demosthenes.info/blog/58/CSS-and-Images-Simple-Roll-over-Image-Gallery) by [Dudley Storey](http://github.com/dudleystorey) I decided to cook up the concept of it in a plugin.
 
-It works with a Simple Gallery custom post type to which you can upload a maximum of 10 images.
+It works with a Simple Gallery custom post type to which you can upload a maximum of 10 images using the [Meta Box plugin](http://wordpress.org/plugins/meta-box/) by [Rilwis](http://profiles.wordpress.org/rilwis/).
 
 Then you can use a simple shortcode that takes the ID of that gallery to output the images the same way as the tutorial by Dudley on your Posts or Pages.
+
+I used a dashicon to add a button to the Visual Editor and therefore you can use the SO Simple Gallery from WordPress version 3.9 and up (as that is the version where TinyMCE 4.x was rolled into Core).
 
 I still need to do some polishing here and there, but it is a working proof of concept and all in all I'm pretty happy with it.
 
