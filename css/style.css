@@ -1,0 +1,65 @@
+dl#so-simple-gallery { 
+  background: #444;
+  position: relative;
+  font-size: 0;
+  padding: 1rem 0.75rem 4rem;
+}
+dl#so-simple-gallery dt{
+  width: 12.5%;
+  min-width: 50px;
+  cursor: pointer;
+}
+dl#so-simple-gallery dt img { 
+  width: 100%;
+  height: auto;
+}
+dl#so-simple-gallery dt:hover+dd { 
+  opacity:1;
+}
+dl#so-simple-gallery dd { 
+  position: absolute;
+  top: 1rem;
+  left: 17.5%;
+  opacity: 0;
+  transition: .7s opacity;
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #f4f4f4;
+  padding-left: 0;
+  width: 80%;
+}
+dl#so-simple-gallery dd img{
+  width: 100%;
+  height: auto;
+  box-shadow:0 0 8px rgba(0,0,0,0.3);
+  display:block;
+  margin-bottom: 1rem;
+}
+dl#so-simple-gallery dd.sosg-image-1 {
+    opacity: 1;
+}
+dl#so-simple-gallery dd.sosg-image-1 .sosg-image-title {
+    opacity: 0;
+}
+dl#so-simple-gallery dt:hover+dd.sosg-image-1 .sosg-image-title { 
+  opacity:1;
+}
+
+
+/* HORIZONTAL GALLERY */
+/*
+dl#so-simple-gallery {
+    background: #444;
+    padding: 0.5rem 0.5rem 8rem;
+}
+dl#so-simple-gallery dt {
+    float: left;
+}
+dl#so-simple-gallery dd {
+    color: #f4f4f4;
+    left: 0;
+    padding: 0 .5rem .5rem;
+    top: 80px;
+}
+*/
