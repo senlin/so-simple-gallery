@@ -291,7 +291,7 @@ function sosg_shortcode( $atts ) {
 	    
 	<?php } // endforeach
 	
-	return '<div class="so-simple-gallery"><dl id="so-simple-gallery">' . ob_get_clean() . '</dl></div>';
+	return '<div class="so-simple-gallery"><dl id="so-simple-gallery" style="min-height:'.$sosg_big[2].'px">' . ob_get_clean() . '</dl></div>';
 	
 }
 
