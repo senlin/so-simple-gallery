@@ -11,30 +11,37 @@ function sosg_render_form() { ?>
 		<!-- Display Plugin Header, and Description -->
 		<h2><?php _e( 'SO Simple Gallery Instructions', 'so-simple-gallery' ); ?></h2>
 		
-		<p><?php _e( 'Below you can find some instruction on how to use the SO Simple Gallery plugin.', 'so-simple-gallery' ); ?></p>
+		<p><?php _e( 'Below you can find some instructions on how to use the SO Simple Gallery plugin.', 'so-simple-gallery' ); ?></p>
 			
 		<div class="sosg-instructions">
 	
-			<p><?php _e( 'With the SO Simple Gallery plugin you can upload up to 10 images per gallery.<br />I have restricted the maximum number of uploads, because it is a vertically oriented plugin and beyond 10 it rapidly becomes ugly.', 'so-simple-gallery' ); ?></p>
+			<p><?php _e( 'With the SO Simple Gallery plugin you can upload up to 8 images per gallery.<br />I have restricted the maximum number of uploads, because it is a vertically oriented plugin and beyond 8 images it rapidly becomes not so nice looking.', 'so-simple-gallery' ); ?></p>
 			<p><?php _e( 'The plugin uses a script that dynamically resizes the images, so you do not have to worry whether or not your images are suitable for use.', 'so-simple-gallery' ); ?></p>
-			<p><?php _e( 'The only thing you need to keep in mind are the <strong>minimum dimensions</strong> of the images you plan to use;<br />these are: 400 pixels (width and/or height).', 'so-simple-gallery' ); ?></p>
+			<p><?php _e( 'The only thing you need to keep in mind is the <strong>minimum width</strong> of the images you plan to use;<br />this is: 800 pixels.', 'so-simple-gallery' ); ?></p>
 			<hr />
 			<p><?php _e( 'The plugin adds <i class="dashicons-images-alt2"></i> <em>Simple Galleries</em> to your sidebar under the Media menu.', 'so-simple-gallery' ); ?></p>
 			<p><?php _e( 'Via that menu you can see all your existing Simple Galleries and Add a New Simple Gallery.', 'so-simple-gallery' ); ?></p>
 			<p><?php _e( 'You can give your Simple Gallery a title and then start uploading your images.<br />You can choose your images from the Media Library or Upload them from your computer.', 'so-simple-gallery' ); ?></p>
-			<p><?php _e( 'After saving the Simple Gallery, you only need to take note of the ID number of that specific Gallery.<br />You ned that number later for the shortcode.', 'so-simple-gallery' ); ?></p>
+			<p><?php _e( 'After saving the Simple Gallery, you will see the shortcode you can use in the message that informs you that the gallery has been published or saved.', 'so-simple-gallery' ); ?></p>
+			<p><?php _e( 'You can also find the shortcode per Simple Gallery on the main Simple Galleries admin screen.', 'so-simple-gallery' ); ?></p>
 			<p><?php _e( 'Once you have added one or more Simple Galleries it is time to add it/them to your content.', 'so-simple-gallery' ); ?></p>
 			<p><?php _e( 'For that I have made a simple to use shortcode button available that you will see if you are using the Visual Editor.', 'so-simple-gallery' ); ?></p>
 			<?php
 				$screenshot_button = plugins_url( '../images/shortcode-button.png', __FILE__ );
 			?>
-			<img src="<?php echo $screenshot_button; ?>" width="600" height="265" alt="" title="shortcode-button" />
+			<img src="<?php echo $screenshot_button; ?>" width="940" height="221" alt="" title="shortcode-button" />
 			<p><?php _e( 'If you click that button it will automatically insert the following shortcode:<br /><code>[so-simple-gallery id=""]</code>', 'so-simple-gallery' ); ?></p>
 			<p><?php _e( 'Now here is where you need to input the ID number of the Gallery you want to show, like:<br><code>[so-simple-gallery id="123"]</code> (where 123 is the ID number of your Simple Gallery).', 'so-simple-gallery' ); ?></p>
-			<p><?php _e( 'If you are not using the Visual Editor, you can just copy the shortcode from the above example and add it to your HTML content.', 'so-simple-gallery' ); ?></p>
-			<p><?php _e( 'If you want to include the shortcode in one of your template files, then you need to use the shortcode like this:<br><code>&lt;?php echo do_shortcode(); ?&gt;</code> and then add the shortcode to between opening and closing single quotes between the parenthesis.', 'so-simple-gallery' ); ?></p>
-			<p><?php _e( '', 'so-simple-gallery' ); ?></p>
-			<p><?php _e( '', 'so-simple-gallery' ); ?></p>
+			<p><?php _e( 'If you are not using the Visual Editor, you can just copy the shortcode from the individual gallery, the main simple galleries screen or from the above example and add it to your HTML content.', 'so-simple-gallery' ); ?></p>
+			<p><?php _e( "If you want to include the shortcode in one of your template files, then you need to use the shortcode like this:<br><code>&lt;?php echo do_shortcode( '[so-simple-gallery id='123']' ); ?&gt;</code> where 123 is the ID of your Simple Gallery.", 'so-simple-gallery' ); ?></p>
+			
+			<h3><?php _e( 'Known Limitations', 'so-simple-gallery' ); ?></h3>
+			<ul>
+				<li><?php _e( 'The SO Simple Gallery looks best with a maximum of 5 landscape images OR when using portrait style image between 6 and 8 images.<br />Mixing portrait and landscape image in one gallery is <strong>not a good idea</strong>.', 'so-simple-gallery' ); ?></li>
+				<li><?php _e( 'If you are uploading images with different sizes then it is best to put the shortest images as the top image.<br />The reason for that is that the first image always shows (to create the placeholder image), so even when you hover over the other images, that first image is still there.<br />This can be solved with some javascript, but I first want to see if there are enough people that like this plugin, before I develop it further.', 'so-simple-gallery' ); ?></li>
+				<li><?php _e( 'I have not yet included any Options to change things like size, background color, text color, add titles and what not.<br />Again I would like to wait and see if there are enough people that like this plugin, before I develop it further.', 'so-simple-gallery' ); ?></li>
+				<li><?php _e( 'Depending on what theme you use, adding a SO Simple Gallery to a full-width template does not always look great.', 'so-simple-gallery' ); ?></li>
+			</ul>
 		
 		</div><!-- .sosg-instructions -->
 

@@ -1,9 +1,9 @@
 <?php
 /* Plugin Name: SO Simple Gallery
- * Plugin URI: http://so-wp.com/?p=xx
+ * Plugin URI: http://so-wp.com/?p=115
  * Description: With the SO Simple Gallery plugin you can add a beautiful gallery to your Posts or Pages with a simple shortcode.
  * Author: Piet Bos
- * Version: 2014.05.04
+ * Version: 2014.05.08
  * Author URI: http://senlinonline.com
  * Text Domain: so-simple-gallery
  * Domain Path: /languages
@@ -85,15 +85,11 @@ function sosg_check_admin_notices()
  * 
  * @since 2014.5.02
  */
-add_action( 'init', 'create_so_simple_gallery_cpt' );
+add_action( 'init', 'create_so_simple_gallery_cpt' ); // see inc/functions.php
 
-add_action( 'admin_init', 'create_so_simple_gallery_cpt' );
+add_action( 'plugins_loaded', 'sosg_init' );
 
 add_action( 'admin_menu', 'sosg_add_options_page' );
-
-add_filter( 'plugin_action_links', 'sosg_plugin_action_links', 10, 2 );
-
-add_filter( 'rwmb_meta_boxes', 'sosg_register_meta_boxes' );
 
 add_action( 'plugins_loaded', 'sosg_includes' );
 
@@ -103,57 +99,21 @@ add_action( 'wp_enqueue_scripts', 'sosg_load_scripts_and_styles' );
 
 add_action( 'admin_enqueue_scripts', 'sosg_mce_css' );
 
-// Register Custom Post Type
-function create_so_simple_gallery_cpt() {
+add_filter( 'plugin_action_links', 'sosg_plugin_action_links', 10, 2 );
 
-	$labels = array(
-		'name'                => _x( 'Simple Galleries', 'Post Type General Name', 'so-simple-gallery' ),
-		'singular_name'       => _x( 'Simple Gallery', 'Post Type Singular Name', 'so-simple-gallery' ),
-		'menu_name'           => __( 'Simple Galleries', 'so-simple-gallery' ),
-		'all_items'           => __( 'All Simple Galleries', 'so-simple-gallery' ),
-		'view_item'           => __( 'View Simple Gallery', 'so-simple-gallery' ),
-		'add_new_item'        => __( 'Add Simple Gallery', 'so-simple-gallery' ),
-		'add_new'             => __( 'Add New', 'so-simple-gallery' ),
-		'edit_item'           => __( 'Edit Simple Gallery', 'so-simple-gallery' ),
-		'update_item'         => __( 'Update Simple Gallery', 'so-simple-gallery' ),
-		'search_items'        => __( 'Search Simple Gallery', 'so-simple-gallery' ),
-		'not_found'           => __( 'Not found', 'so-simple-gallery' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'so-simple-gallery' ),
-	);
-	$args = array(
-		'label'               => __( 'so_simple_gallery', 'so-simple-gallery' ),
-		'description'         => __( 'Simple Gallery Post Type', 'so-simple-gallery' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => false,
-		'show_in_admin_bar'   => false,
-		'menu_position'       => 15,
-		'menu_icon'           => 'dashicons-images-alt2',
-		'can_export'          => true,
-		'has_archive'         => false,
-		'exclude_from_search' => true,
-		'query_var'			  => false,
-		'publicly_queryable'  => false,
-		'rewrite'             => false,
-		'capability_type'     => 'post',
-	);
-	register_post_type( 'so_simple_gallery', $args );
+add_filter( 'rwmb_meta_boxes', 'sosg_register_meta_boxes' ); // see inc/functions.php
 
-}
+add_filter( 'manage_edit-so_simple_gallery_columns', 'sosg_edit_admin_columns' ); // see inc/functions.php
 
+add_action( 'manage_so_simple_gallery_posts_custom_column', 'sosg_manage_admin_columns', 10, 2 ); // see inc/functions.php
 
+add_filter( 'post_updated_messages', 'sosg_update_messages' ); // see inc/functions.php
 
 /**
  * Load the textdomain
  * 
  * @since 2014.5.02
  */
-add_action( 'plugins_loaded', 'sosg_init' );
-
 function sosg_init() {
 	load_plugin_textdomain( 'so-simple-gallery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
@@ -173,6 +133,10 @@ function sosg_add_options_page() {
 
 }
 
+function sosg_load_custom_admin_style() {
+	wp_enqueue_style( 'sosg', plugins_url( '/css/settings.css', __FILE__ ) );
+}
+
 /**
  * Display a Settings link on the main Plugins page
  * 
@@ -187,10 +151,6 @@ function sosg_plugin_action_links( $links, $file ) {
 	}
 
 	return $links;
-}
-
-function sosg_load_custom_admin_style() {
-	wp_enqueue_style( 'sosg', plugins_url( '/css/settings.css', __FILE__ ) );
 }
 
 /**
@@ -238,14 +198,16 @@ function sosg_register_mce_button( $buttons ) {
 }
 
 /**
- * Add stylesheet for frontend
+ * Add stylesheet for frontend, but only when the shortcode is actually present
  * 
+ * @source: https://codex.wordpress.org/Function_Reference/has_shortcode
  * @since 2014.5.02
  */
 function sosg_load_scripts_and_styles() {
-	
-	wp_enqueue_style( 'sosg', plugins_url( '/css/style.css', __FILE__ ) );
-	
+	global $post;
+	if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'so-simple-gallery') ) {
+		wp_enqueue_style( 'sosg', plugins_url( '/css/style.css', __FILE__ ) );
+	}
 }
 
 /* @source: https://www.gavick.com/magazine/adding-your-own-buttons-in-tinymce-4-editor.html#tc-section-4 */
@@ -254,7 +216,6 @@ function sosg_mce_css() {
 }
 
 // Add Shortcode
-
 function sosg_shortcode( $atts ) {
 
 	// Attributes
@@ -271,27 +232,35 @@ function sosg_shortcode( $atts ) {
 	
 	$sosg_gallery = rwmb_meta( 'sosg_images', 'type=image_advanced', esc_html( $id ) );
 	
-	$i = 0;
+	$i = 0; // add counter so we can add a number class to each individual image in the gallery
 	
 	foreach ( $sosg_gallery as $sosg_image ) {
 	
 	$sosg_thumb = aq_resize( $sosg_image['url'], 75, 75, true );
 
 	$url = $sosg_image['full_url'];
-	$width = 800;
+	$width = 600;
 	$height = '';
 	$crop = true;
 	$single = false;
-	$upscale = false;
+	$upscale = true;
 	$sosg_big = aq_resize( $url, $width, $height, $crop, $single, $upscale );
 	
-	$i++; ?>
+	$i++;
+	
+	/* Quick Reminder:
+	$sosg_big[0] = url of full image proportionally resized to 800px wide
+	$sosg_big[1] = width in pixels (i.e. 800px)
+	$sosg_big[2] = proportional height in pixels
+	*/
+	
+	?>
 		
 	<dt><img src="<?php echo $sosg_thumb; ?>" alt="<?php echo $sosg_image['alt']; ?>" width="75" height="75" /></dt><dd class="sosg-image-<?php echo $i; ?>"><img src="<?php echo $sosg_big[0]; ?>" alt="<?php echo $sosg_image['alt']; ?>" width="<?php echo $sosg_big[1]; ?>" height="<?php echo $sosg_big[2]; ?>" /><span class="sosg-image-title"><?php echo $sosg_image['title']; ?></span></dd>
 	    
 	<?php } // endforeach
 	
-	return '<div class="so-simple-gallery"><dl id="so-simple-gallery" style="min-height:'.$sosg_big[2].'px">' . ob_get_clean() . '</dl></div>';
+	return '<div class="so-simple-gallery"><dl id="sosg" class="gallery-' . esc_html( $id ) . '">' . ob_get_clean() . '</dl></div>';
 	
 }
 

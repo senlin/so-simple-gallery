@@ -11,19 +11,26 @@
 .wrap p, .sosg-instructions p {
 	font-size: 16px;
 }
+.sosg-instructions > ul {
+    list-style: disc inside;
+}
+.sosg-instructions > ul > li {
+	font-size: 16px;
+	line-height: 24px;
+}
 .sosg-instructions .dashicons-images-alt2 {
     font-family: dashicons;
     font-style: normal;
 }
 .discount {
-    color: #008CBA;
+    color: #008cba;
     font-family: Consolas,Monaco,monospace;
     font-style: normal;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
 .rate-this-plugin {
-	color: #0074A2;
+	color: #0074a2;
 	font-style: italic;
 	font-size: 16px;
 }
@@ -34,7 +41,7 @@
 	max-width: 500px;
 }
 .author.postbox .hndle {
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #ddd;
     margin-bottom: 0;
     padding: 5px;
 }
@@ -47,7 +54,7 @@
     min-height: 90px;
 }
 .author.postbox .inside > .top > .author-image {
-	border: 1px solid #DFDFDF;
+	border: 1px solid #dfdfdf;
 	float: left;
 	margin-right: 10px;
 	padding: 3px;

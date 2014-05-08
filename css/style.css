@@ -1,65 +1,70 @@
-dl#so-simple-gallery { 
-  background: #444;
-  position: relative;
-  font-size: 0;
-  padding: 1rem 0.75rem 4rem;
+/**
+ * Frontend styling for SO Simple Gallery plugin
+ *
+ * @source: http://demosthenes.info/blog/58/CSS-and-Images-Simple-Roll-over-Image-Gallery
+ * @since 2014.04.02
+ */
+
+.so-simple-gallery {
+	margin-bottom: 1.25rem; /* 20px */
 }
-dl#so-simple-gallery dt{
-  width: 12.5%;
-  min-width: 50px;
-  cursor: pointer;
+.so-simple-gallery::after {
+	clear: both;
 }
-dl#so-simple-gallery dt img { 
-  width: 100%;
-  height: auto;
+dl#sosg { 
+	background: #444;
+	font-size: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 1rem 0.75rem 4rem;
+	position: relative;
 }
-dl#so-simple-gallery dt:hover+dd { 
-  opacity:1;
+dl#sosg dt{
+	cursor: pointer;
+	margin-bottom: 10px;
+	min-width: 50px;
+	width: 12.5%;
 }
-dl#so-simple-gallery dd { 
-  position: absolute;
-  top: 1rem;
-  left: 17.5%;
-  opacity: 0;
-  transition: .7s opacity;
-  text-align: center;
-  font-size: 1.4rem;
-  font-style: italic;
-  color: #f4f4f4;
-  padding-left: 0;
-  width: 80%;
+dl#sosg dt img { 
+	height: auto;
+	width: 100%;
 }
-dl#so-simple-gallery dd img{
-  width: 100%;
-  height: auto;
-  box-shadow:0 0 8px rgba(0,0,0,0.3);
-  display:block;
-  margin-bottom: 1rem;
+dl#sosg dt:hover+dd,
+dl#sosg dt:focus+dd { 
+	opacity:1;
 }
-dl#so-simple-gallery dd.sosg-image-1 {
+dl#sosg dd { 
+	color: #f4f4f4;
+	font-size: 1.2rem;
+	font-style: italic;
+	left: 17.5%;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	top: 1rem;
+	padding-left: 0;
+	width: 80%;
+	-webkit-transition: .7s opacity;
+	-moz-transition: .7s opacity;
+	-o-transition: .7s opacity;
+	transition: .7s opacity;  
+}
+dl#sosg dd img{
+	display:block;
+	height: auto;
+	margin-bottom: 1rem;
+	width: 100%;
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
+	box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+dl#sosg dd.sosg-image-1 {
     opacity: 1;
 }
-dl#so-simple-gallery dd.sosg-image-1 .sosg-image-title {
+dl#sosg dd.sosg-image-1 .sosg-image-title {
     opacity: 0;
 }
-dl#so-simple-gallery dt:hover+dd.sosg-image-1 .sosg-image-title { 
-  opacity:1;
+dl#sosg dt:hover+dd.sosg-image-1 .sosg-image-title,
+dl#sosg dt:focus+dd.sosg-image-1 .sosg-image-title { 
+	opacity:1;
 }
-
-
-/* HORIZONTAL GALLERY */
-/*
-dl#so-simple-gallery {
-    background: #444;
-    padding: 0.5rem 0.5rem 8rem;
-}
-dl#so-simple-gallery dt {
-    float: left;
-}
-dl#so-simple-gallery dd {
-    color: #f4f4f4;
-    left: 0;
-    padding: 0 .5rem .5rem;
-    top: 80px;
-}
-*/
