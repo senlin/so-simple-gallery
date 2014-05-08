@@ -22,9 +22,10 @@ When you use the Visual Editor you will find a nice shortcode button that by cli
 If you use the Text Editor instead, you can copy the shortcode from the main Simple Galleries screen and paste it into your Edit Post/Page screen.
 
 If you would like to add a gallery to a template file, then you need to add the following code to it:
-`&lt;?php if ( function_exists( 'sosg_shortcode' ) ) {
+
+`<?php if ( function_exists( 'sosg_shortcode' ) ) {
 	echo do_shortcode( '[so-simple-gallery id="123"]' );
-} ?&gt;`
+} ?>`
 where 123 is the ID of your Simple Gallery. 
 
 I used a dashicon to add a button to the Visual Editor and therefore you can use the SO Simple Gallery from WordPress version 3.9 and up (as that is the version where TinyMCE 4.x was rolled into Core).
