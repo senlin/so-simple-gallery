@@ -16,7 +16,7 @@ dl#sosg {
 	font-size: 0;
 	margin-left: 0;
 	margin-right: 0;
-	padding: 1rem 0.75rem 4rem;
+	padding: 1rem 0.75rem;
 	position: relative;
 }
 dl#sosg dt{
@@ -24,6 +24,15 @@ dl#sosg dt{
 	margin-bottom: 10px;
 	min-width: 50px;
 	width: 12.5%;
+}
+dl#sosg dt.gallery-description {
+    color: #f4f4f4;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 70px;
+    text-align: center;
+    width: 100%;
 }
 dl#sosg dt img { 
 	height: auto;

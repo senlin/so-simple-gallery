@@ -3,7 +3,7 @@
  * Plugin URI: http://so-wp.com/?p=115
  * Description: With the SO Simple Gallery plugin you can add a beautiful gallery to your Posts or Pages with a simple shortcode.
  * Author: Piet Bos
- * Version: 2014.05.08
+ * Version: upcoming version
  * Author URI: http://senlinonline.com
  * Text Domain: so-simple-gallery
  * Domain Path: /languages
@@ -237,6 +237,9 @@ function sosg_shortcode( $atts ) {
 	foreach ( $sosg_gallery as $sosg_image ) {
 	
 	$sosg_thumb = aq_resize( $sosg_image['url'], 75, 75, true );
+	$sosg_gallery_title = get_the_title( $id );
+	$sosg_gallery_description = rwmb_meta( 'sosg_description', 'type=textarea', $id );
+
 
 	$url = $sosg_image['full_url'];
 	$width = 800;
@@ -260,7 +263,7 @@ function sosg_shortcode( $atts ) {
 	    
 	<?php } // endforeach
 	
-	return '<div class="so-simple-gallery"><dl id="sosg" class="gallery-' . esc_html( $id ) . '">' . ob_get_clean() . '</dl></div>';
+	return '<div class="so-simple-gallery"><h3 class="gallery-title">' . esc_html( $sosg_gallery_title ) . '</h3><dl id="sosg" class="gallery-' . esc_html( $id ) . '">' . ob_get_clean() . '<dt class="gallery-description">' . $sosg_gallery_description . '</dt></dl></div>';
 	
 }
 

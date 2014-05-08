@@ -60,6 +60,15 @@ function sosg_register_meta_boxes( $meta_boxes ) {
 		'priority' => 'high',
 		'autosave' => true,
 		'fields' => array(
+			// TEXTAREA
+			array(
+				'name' => __( 'Gallery description', 'rwmb' ),
+				'desc' => __( 'You can use this area to write a description about this Simple Gallery.', 'rwmb' ),
+				'id'   => "{$prefix}description",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 3,
+			),
 			// IMAGE ADVANCED UPLOAD
 			array(
 				'name' => __( 'Choose the images you want to upload to display in your Simple Gallery.<br /><br />The Gallery looks best with a maximum of 5 landscape images OR when using portrait style image between 6 and 8 images.<br /><br />Mixing portrait and landscape image in one gallery is <strong>not a good idea</strong>.<br /><br />Once you have saved or published your gallery, you can go to the main <strong>All Simple Galleries</strong> screen to see the shortcode you can use.', 'so-simple-gallery' ),

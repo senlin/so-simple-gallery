@@ -1,11 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SO Simple Gallery\n"
-"POT-Creation-Date: 2014-05-08 18:00+0800\n"
-"PO-Revision-Date: 2014-05-08 18:01+0800\n"
+"POT-Creation-Date: 2014-05-09 02:49+0800\n"
+"PO-Revision-Date: 2014-05-09 02:49+0800\n"
 "Last-Translator: Piet Bos <piet@senlinonline.com>\n"
 "Language-Team: Piet Bos <piet@senlinonline.com>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -576,6 +575,14 @@ msgid "Simple Gallery"
 msgstr ""
 
 #: inc/functions.php:65
+msgid "Gallery description"
+msgstr ""
+
+#: inc/functions.php:66
+msgid "You can use this area to write a description about this Simple Gallery."
+msgstr ""
+
+#: inc/functions.php:74
 msgid ""
 "Choose the images you want to upload to display in your Simple Gallery.<br /"
 "><br />The Gallery looks best with a maximum of 5 landscape images OR when "
@@ -586,73 +593,73 @@ msgid ""
 "shortcode you can use."
 msgstr ""
 
-#: inc/functions.php:86
+#: inc/functions.php:95
 msgid "Gallery Title"
 msgstr ""
 
-#: inc/functions.php:87
+#: inc/functions.php:96
 msgid "Shortcode"
 msgstr ""
 
-#: inc/functions.php:88
+#: inc/functions.php:97
 msgid "Date"
 msgstr ""
 
-#: inc/functions.php:113
+#: inc/functions.php:122
 msgid "Hover over the Gallery name to check what ID shows in the URL"
 msgstr ""
 
-#: inc/functions.php:117
+#: inc/functions.php:126
 #, php-format
 msgid "<code>[so-simple-gallery id=\"%s\"]</code>"
 msgstr ""
 
-#: inc/functions.php:144
+#: inc/functions.php:153
 #, php-format
 msgid ""
 "%s updated. Use <code>[so-simple-gallery id=\"%s\"]</code> to add the "
 "gallery to your Post or Page"
 msgstr ""
 
-#: inc/functions.php:145
+#: inc/functions.php:154
 #, php-format
 msgid "%s updated."
 msgstr ""
 
-#: inc/functions.php:146
+#: inc/functions.php:155
 #, php-format
 msgid "%2$s restored to revision from %1$s"
 msgstr ""
 
-#: inc/functions.php:147
+#: inc/functions.php:156
 #, php-format
 msgid ""
 "%s published. Use <code>[so-simple-gallery id=\"%s\"]</code> to add the "
 "gallery to your Post or Page"
 msgstr ""
 
-#: inc/functions.php:148
+#: inc/functions.php:157
 #, php-format
 msgid "%s saved."
 msgstr ""
 
-#: inc/functions.php:149
+#: inc/functions.php:158
 #, php-format
 msgid "%s submitted. <a href=\"%s\" target=\"_blank\">Preview %s</a>"
 msgstr ""
 
-#: inc/functions.php:150
+#: inc/functions.php:159
 #, php-format
 msgid ""
 "%s scheduled for: <strong>%s</strong>. <a href=\"%s\" target=\"_blank"
 "\">Preview %s</a>"
 msgstr ""
 
-#: inc/functions.php:150
+#: inc/functions.php:159
 msgid "M j, Y @ G:i"
 msgstr ""
 
-#: inc/functions.php:151
+#: inc/functions.php:160
 #, php-format
 msgid "%s draft updated. <a href=\"%s\" target=\"_blank\">Preview %s</a>"
 msgstr ""
