@@ -30,6 +30,8 @@ where 123 is the ID of your Simple Gallery.
 
 Please have a look at the "Other Notes" tab to find the Known Limitations.
 
+See [the demo](http://so-wp.com/?p=115) over at SO-WP.com
+
 == Installation ==
 
 Go to **Plugins > Add New** in your WordPress Dashboard, do a search for "so simple gallery" and install it.

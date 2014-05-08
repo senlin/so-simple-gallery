@@ -5,7 +5,7 @@
 ###### tested up to WordPress 3.9
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-simple-gallery) (via WordPress Plugins Repository)
-###### [Plugin homepage](http://so-wp.com/?p=115)
+###### [Plugin homepage](http://so-wp.com/?p=115) with Live Demo
 
 The SO Simple Gallery plugin gives you a mini gallery with a beautiful CSS rollover effect using a simple shortcode.
 
