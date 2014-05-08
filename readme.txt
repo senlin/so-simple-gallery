@@ -74,6 +74,12 @@ Please open an issue over at [Github](https://github.com/senlin/so-simple-galler
 
 * Depending on what theme you use, adding a SO Simple Gallery to a full-width template does not always look great.
 
+== Screenshots ==
+
+1. Add/edit Simple Gallery
+2. Simple Galleries main screen with shortcodes of existing galleries
+3. Demo SO Simple Gallery
+
 == Changelog ==
 
 = 2014.05.08 =

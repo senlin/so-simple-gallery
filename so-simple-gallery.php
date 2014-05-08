@@ -239,7 +239,7 @@ function sosg_shortcode( $atts ) {
 	$sosg_thumb = aq_resize( $sosg_image['url'], 75, 75, true );
 
 	$url = $sosg_image['full_url'];
-	$width = 600;
+	$width = 800;
 	$height = '';
 	$crop = true;
 	$single = false;
