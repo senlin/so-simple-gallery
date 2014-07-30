@@ -3,8 +3,8 @@ Contributors: senlin
 Tags: gallery, css, rollover effect,
 Donate link: http://so-wp.com/donations
 Requires at least: 3.9
-Tested up to: 3.9
-Stable tag: 2014.05.08
+Tested up to: 4.0-beta-2
+Stable tag: 2014.07.30
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,6 +83,12 @@ Please open an issue over at [Github](https://github.com/senlin/so-simple-galler
 3. Demo SO Simple Gallery
 
 == Changelog ==
+
+= 2014.07.30 =
+
+* added the check for the metabox plugin (all files were there, but had forgotten to build the check for it in)
+* get rid of ob_end_flush() error that sometimes occurs
+* tested up to WP 4.0-beta-2
 
 = 2014.05.08 =
 

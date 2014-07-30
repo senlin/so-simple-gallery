@@ -1,8 +1,8 @@
 # SO Simple Gallery
 
-###### Last updated on 2014.05.08
+###### Last updated on 2014.07.30
 ###### requires at least WordPress 3.9 (using a shortcode button in the new TinyMCE, no backward compatibility)
-###### tested up to WordPress 3.9
+###### tested up to WordPress 4.0-beta-2
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-simple-gallery) (via WordPress Plugins Repository)
 ###### [Plugin homepage](http://so-wp.com/?p=115) with Live Demo
@@ -76,6 +76,12 @@ This repo is open to _any_ kind of contributions.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2014.07.30
+
+* added the check for the metabox plugin (all files were there, but had forgotten to build the check for it in)
+* get rid of ob_end_flush() error that sometimes occurs
+* tested up to WP 4.0-beta-2
 
 ### 2014.05.08
 

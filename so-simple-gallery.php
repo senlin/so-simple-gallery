@@ -3,7 +3,7 @@
  * Plugin URI: http://so-wp.com/?p=115
  * Description: With the SO Simple Gallery plugin you can add a beautiful gallery to your Posts or Pages with a simple shortcode.
  * Author: Piet Bos
- * Version: 2014.05.08
+ * Version: 2014.07.30
  * Author URI: http://senlinonline.com
  * Text Domain: so-simple-gallery
  * Domain Path: /languages
@@ -26,6 +26,15 @@
  * MA 02110-1301, USA.
  *
  */
+
+/**
+ * get rid of ob_end_flush(): failed to send buffer of zlib output compression (0) 
+ * this error occurs sometimes and completely messes up the Dashboard
+ *
+ * @source: 3rd comment on wordpress.stackexchange.com/a/70597/2015
+ * @since 2014.07.30
+ */
+ini_set( 'zlib.output_handler', '' );
 
 /**
  * Prevent direct access to files
@@ -169,6 +178,48 @@ function sosg_includes() {
 	/* Load the Aqua Resizer script file. */
 	require_once( 'inc/aq_resizer.php' );
 }
+
+/**
+ * This function checks whether the Meta Box plugin is active (it needs to be active for this to have any use)
+ * and redirects to inc/required-plugin.php script if it is not active.
+ *
+ * modified using http://wpengineer.com/1657/check-if-required-plugin-is-active/ and the _no_wpml_warning function (of WPML)
+ *
+ * @since 2014.07.30
+ */
+
+$plugins = get_option( 'active_plugins' );
+
+$required_plugin = 'meta-box/meta-box.php';
+
+// multisite throws the error message by default, because the plugin is installed on the network site, therefore check for multisite
+if ( ! in_array( $required_plugin , $plugins ) && ! is_multisite() ) {
+
+	add_action( 'admin_notices', 'sosg_no_meta_box_warning' );
+
+}
+
+function sosg_no_meta_box_warning() {
+    
+    // display the warning message
+    echo '<div class="message error"><p>';
+    
+    printf( __( 'The <strong>SO Simple Gallery plugin</strong> only works if you have the <a href="%s">Meta Box</a> plugin installed.', 'so-simple-gallery' ), 
+		admin_url( 'plugins.php?page=install-required-plugin' )
+	);
+    
+    echo '</p></div>';
+    
+}
+
+/**
+ * Include the TGM Activation Class
+ *
+ * @since 2014.07.30
+ */
+require_once dirname( __FILE__ ) . '/inc/required-plugin.php';
+
+
 
 /* @source: https://www.gavick.com/magazine/adding-your-own-buttons-in-tinymce-4-editor.html#tc-section-4 */
 function sosg_add_mce_button() {
