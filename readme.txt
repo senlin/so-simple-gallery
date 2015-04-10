@@ -2,9 +2,9 @@
 Contributors: senlin
 Tags: gallery, css, rollover effect,
 Donate link: http://so-wp.com/donations
-Requires at least: 3.9
-Tested up to: 4.0-beta-2
-Stable tag: 2014.07.30
+Requires at least: 4.0
+Tested up to: 4.2
+Stable tag: 2015.04.09
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ The SO Simple Gallery plugin gives you a mini gallery with a beautiful CSS rollo
 
 Inspired by a [LinkedIn discussion](https://www.linkedin.com/groupItem?view=&gid=154024&type=member&item=5867588708181516289) and the [Simple CSS Roll-over Image Gallery tutorial](http://demosthenes.info/blog/58/CSS-and-Images-Simple-Roll-over-Image-Gallery) by [Dudley Storey](http://github.com/dudleystorey) I decided to cook up the concept of it in a plugin.
 
-It works with a Simple Gallery custom post type to which you can upload a maximum of 8 images using the [Meta Box plugin](http://wordpress.org/plugins/meta-box/) by [Rilwis](http://profiles.wordpress.org/rilwis/). This is my 3rd "extension" for that plugin, which - if you have not yet installed it - will be semi-automatically added to your Plugins folder; just follow the on-screen instructions.
+It works with a Simple Gallery custom post type to which you can upload a maximum of 8 images using the [Meta Box plugin](http://wordpress.org/plugins/meta-box/). This is my 3rd "extension" for that plugin, which - if you have not yet installed it - will be semi-automatically added to your Plugins folder; just follow the on-screen instructions.
 
 Once you have added images to your Simple Gallery you can add it to your Post or Page using a simple shortcode. This shortcode shows after you have published or updated the Simple Gallery. And you can also find the shortcode on the main Simple Galleries screen.
 
@@ -68,11 +68,11 @@ Please open an issue over at [Github](https://github.com/senlin/so-simple-galler
 
 = Known Limitations =
 
-* The SO Simple Gallery looks best with a maximum of 5 landscape images OR when using portrait style image between 6 and 8 images.<br />Mixing portrait and landscape image in one gallery is <strong>not a good idea</strong>.
+* The SO Simple Gallery looks best with a maximum of 5 landscape images OR when using portrait style image between 6 and 8 images. Mixing portrait and landscape image in one gallery is <strong>not a good idea</strong>.
 
-* If you are uploading images with different sizes then it is best to put the shortest images as the top image.<br />The reason for that is that the first image always shows (to create the placeholder image), so even when you hover over the other images, that first image is still there.<br />This can be solved with some javascript, but I first want to see if there are enough people that like this plugin, before I develop it further.
+* If you are uploading images with different sizes then it is best to put the shortest images as the top image. The reason for that is that the first image always shows (to create the placeholder image), so even when you hover over the other images, that first image is still there. This can be solved with some javascript, but I first want to see if there are enough people that like this plugin, before I develop it further.
 
-* I have not yet included any Options to change things like size, background color, text color, add titles and what not.<br />Again I would like to wait and see if there are enough people that like this plugin, before I develop it further.
+* I have not yet included any Options to change things like size, background color, text color, add titles and what not. Again I would like to wait and see if there are enough people that like this plugin, before I develop it further.
 
 * Depending on what theme you use, adding a SO Simple Gallery to a full-width template does not always look great.
 
@@ -83,6 +83,11 @@ Please open an issue over at [Github](https://github.com/senlin/so-simple-galler
 3. Demo SO Simple Gallery
 
 == Changelog ==
+
+= 2015.04.09 =
+
+* changed logos
+* new banner image for WP.org Repo by [Kyle Szegedi](https://unsplash.com/kyleszegedi)
 
 = 2014.07.30 =
 

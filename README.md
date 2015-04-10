@@ -1,8 +1,8 @@
 # SO Simple Gallery
 
-###### Last updated on 2014.07.30
-###### requires at least WordPress 3.9 (using a shortcode button in the new TinyMCE, no backward compatibility)
-###### tested up to WordPress 4.0-beta-2
+###### Last updated on 2015.04.09
+###### requires at least WordPress 4.0
+###### tested up to WordPress 4.2
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-simple-gallery) (via WordPress Plugins Repository)
 ###### [Plugin homepage](http://so-wp.com/?p=115) with Live Demo
@@ -13,7 +13,7 @@ The SO Simple Gallery plugin gives you a mini gallery with a beautiful CSS rollo
 
 Inspired by a [LinkedIn discussion](https://www.linkedin.com/groupItem?view=&gid=154024&type=member&item=5867588708181516289) and the [Simple CSS Roll-over Image Gallery tutorial](http://demosthenes.info/blog/58/CSS-and-Images-Simple-Roll-over-Image-Gallery) by [Dudley Storey](http://github.com/dudleystorey) I decided to cook up the concept of it in a plugin.
 
-It works with a Simple Gallery custom post type to which you can upload a maximum of 8 images using the [Meta Box plugin](http://wordpress.org/plugins/meta-box/) by [Rilwis](http://profiles.wordpress.org/rilwis/). This is my 3rd "extension" for that plugin, which - if you have not yet installed it - will be semi-automatically added to your Plugins folder; just follow the on-screen instructions.
+It works with a Simple Gallery custom post type to which you can upload a maximum of 8 images using the [Meta Box plugin](http://wordpress.org/plugins/meta-box/). This is my 3rd "extension" for that plugin, which - if you have not yet installed it - will be semi-automatically added to your Plugins folder; just follow the on-screen instructions.
 
 Once you have added images to your Simple Gallery you can add it to your Post or Page using a simple shortcode. This shortcode shows after you have published or updated the Simple Gallery. And you can also find the shortcode on the main Simple Galleries screen.
 
@@ -69,13 +69,16 @@ This repo is open to _any_ kind of contributions.
 
 [Github](https://github.com/senlin) 
 
-[Google+](http://plus.google.com/+PietBos) 
-
 [WordPress](http://profiles.wordpress.org/senlin/) 
 
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2015.04.09
+
+* changed logos
+* new banner image for WP.org Repo by [Kyle Szegedi](https://unsplash.com/kyleszegedi)
 
 ### 2014.07.30
 
