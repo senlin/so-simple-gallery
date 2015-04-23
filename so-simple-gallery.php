@@ -3,7 +3,7 @@
  * Plugin URI: http://so-wp.com/?p=115
  * Description: With the SO Simple Gallery plugin you can add a beautiful gallery to your Posts or Pages with a simple shortcode.
  * Author: Piet Bos
- * Version: 2015.04.09
+ * Version: 2015.04.23
  * Author URI: http://senlinonline.com
  * Text Domain: so-simple-gallery
  * Domain Path: /languages
