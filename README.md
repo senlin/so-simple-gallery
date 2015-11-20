@@ -1,6 +1,8 @@
 # SO Simple Gallery
 
-###### Last updated on 2015.04.23
+[![plugin version](https://img.shields.io/wordpress/plugin/v/so-simple-gallery.svg)](https://wordpress.org/plugins/so-simple-gallery)
+
+###### Last updated on 2015.11.20
 ###### requires at least WordPress 4.0
 ###### tested up to WordPress 4.4
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -77,22 +79,27 @@ This repo is open to _any_ kind of contributions.
 
 ## Changelog
 
-### 2015.04.23
+### 1.1.5 (2015.11.20)
+
+* revert to [semantic versioning](http://semver.org/)
+* [BUG FIX] fixed bug that visually removed the edit permalink from all post/page edit screens, should only be on simple gallery post type.
+
+### 1.1.4 (2015.04.23)
 
 * update TGM Plugin Activation class to 2.4.1 which fixes reported [XSS vulnerability](http://wptavern.com/xss-vulnerability-what-to-do-if-you-buy-or-sell-items-on-themeforest-and-codecanyon) 
 
-### 2015.04.09
+### 1.1.3 (2015.04.09)
 
 * changed logos
 * new banner image for WP.org Repo by [Kyle Szegedi](https://unsplash.com/kyleszegedi)
 
-### 2014.07.30
+### 1.1.2 (2014.07.30)
 
 * added the check for the metabox plugin (all files were there, but had forgotten to build the check for it in)
 * get rid of ob_end_flush() error that sometimes occurs
 * tested up to WP 4.0-beta-2
 
-### 2014.05.08
+### 1.1.1 (2014.05.08)
 
 * polishing
 * add documentation
@@ -100,7 +107,7 @@ This repo is open to _any_ kind of contributions.
 * add language file
 * add screenshots
 
-### 2014.05.04
+### 1.0 (2014.05.04)
 
 * initial release
 
@@ -112,3 +119,8 @@ This repo is open to _any_ kind of contributions.
 ---
 ![Demo SO Simple Gallery (frontend).](assets/screenshot-3.png "Output Frontend")
 
+## Upgrade Notice
+
+### 1.1.5 (2015.11.20)
+
+* revert to [semantic versioning](http://semver.org/) - this means that the update doesn't show in your Dashboard, because 2015.04.23 is a higher number than 1.1.5. There really is no other good way to do this other than to remove the plugin from the Repo and admit it again using a different name. That also would not help you as the plugin still would not show an update in your Dashboard. Therefore, many apologies for the inconvenience.

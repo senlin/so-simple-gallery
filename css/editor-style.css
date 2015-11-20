@@ -5,7 +5,7 @@
  * @since 2014.05.02
  */
 
-#edit-slug-box.hide-if-no-js {
+.post-type-so_simple_gallery #edit-slug-box.hide-if-no-js {
     display: none;
 }
 
