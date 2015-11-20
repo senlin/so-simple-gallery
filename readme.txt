@@ -3,7 +3,7 @@ Contributors: senlin
 Tags: gallery, css, rollover effect,
 Donate link: http://so-wp.com/donations
 Requires at least: 4.0
-Tested up to: 4.2
+Tested up to: 4.4
 Stable tag: 2015.04.23
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -67,6 +67,8 @@ Please open an issue over at [Github](https://github.com/senlin/so-simple-galler
 == Other Notes ==
 
 = Known Limitations =
+
+* If you are using the Yoast SEO plugin, then you might want to hold off on the recent updates (3.0, 3.0.1, 3.0.2, 3.0.3), because these "updates" come with major and blocking javascript errors. This basically means that everything that also depends on javascript or jQuery falls apart too. The last known stable version of Yoast SEO is 2.3.5, which you can download [here](https://downloads.wordpress.org/plugin/wordpress-seo.2.3.5.zip).
 
 * The SO Simple Gallery looks best with a maximum of 5 landscape images OR when using portrait style image between 6 and 8 images. Mixing portrait and landscape image in one gallery is <strong>not a good idea</strong>.
 

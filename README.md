@@ -2,7 +2,7 @@
 
 ###### Last updated on 2015.04.23
 ###### requires at least WordPress 4.0
-###### tested up to WordPress 4.2
+###### tested up to WordPress 4.4
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-simple-gallery) (via WordPress Plugins Repository)
 ###### [Plugin homepage](http://so-wp.com/?p=115) with Live Demo
@@ -43,6 +43,8 @@ This plugin is an Extension for the [Meta Box plugin](http://wordpress.org/plugi
 Please open an issue here on [Github](https://github.com/senlin/so-simple-gallery/issues)
 
 ## Known Limitations
+
+* If you are using the Yoast SEO plugin, then you might want to hold off on the recent updates (3.0, 3.0.1, 3.0.2, 3.0.3), because these "updates" come with major and blocking javascript errors. This basically means that everything that also depends on javascript or jQuery falls apart too. The last known stable version of Yoast SEO is 2.3.5, which you can download [here](https://downloads.wordpress.org/plugin/wordpress-seo.2.3.5.zip).
 
 * The SO Simple Gallery looks best with a maximum of 5 landscape images OR when using portrait style image between 6 and 8 images.<br />Mixing portrait and landscape image in one gallery is <strong>not a good idea</strong>.
 
