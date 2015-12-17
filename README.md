@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-simple-gallery.svg)](https://wordpress.org/plugins/so-simple-gallery)
 
-###### Last updated on 2015.11.20
+###### Last updated on 2015.12.17
 ###### requires at least WordPress 4.0
 ###### tested up to WordPress 4.4
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -46,8 +46,6 @@ Please open an issue here on [Github](https://github.com/senlin/so-simple-galler
 
 ## Known Limitations
 
-* If you are using the Yoast SEO plugin, then you might want to hold off on the recent updates (3.0, 3.0.1, 3.0.2, 3.0.3), because these "updates" come with major and blocking javascript errors. This basically means that everything that also depends on javascript or jQuery falls apart too. The last known stable version of Yoast SEO is 2.3.5, which you can download [here](https://downloads.wordpress.org/plugin/wordpress-seo.2.3.5.zip).
-
 * The SO Simple Gallery looks best with a maximum of 5 landscape images OR when using portrait style image between 6 and 8 images.<br />Mixing portrait and landscape image in one gallery is <strong>not a good idea</strong>.
 
 * If you are uploading images with different sizes then it is best to put the shortest images as the top image.<br />The reason for that is that the first image always shows (to create the placeholder image), so even when you hover over the other images, that first image is still there.<br />This can be solved with some javascript, but I first want to see if there are enough people that like this plugin, before I develop it further.
@@ -78,6 +76,10 @@ This repo is open to _any_ kind of contributions.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 1.2.0 (2015.12.17)
+
+* update TGM-Plugin-Activation class to 2.5.2 fixes [issue #2](https://github.com/senlin/so-simple-gallery/issues/2)
 
 ### 1.1.5 (2015.11.20)
 

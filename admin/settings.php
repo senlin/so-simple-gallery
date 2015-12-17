@@ -82,11 +82,10 @@ function sosg_render_form() { ?>
 				</div> <!-- end .top -->
 				
 				<ul>
-					<li><a href="https://senlinonline.com/plus/" target="_blank" title="SO PLUS"><?php _e( 'SO PLUS', 'so-simple-gallery' ); ?></a></li>
 					<li><a href="http://senlinonline.com/" target="_blank" title="Senlin Online"><?php _e( 'Senlin Online', 'so-simple-gallery' ); ?></a></li>
 					<li><a href="http://wpti.ps/" target="_blank" title="WP TIPS"><?php _e( 'WP Tips', 'so-simple-gallery' ); ?></a></li>
 					<li><a href="https://plus.google.com/+PietBos" target="_blank" title="Piet on Google+"><?php _e( 'Google+', 'so-simple-gallery' ); ?></a></li>
-					<li><a href="https://cn.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile"><?php _e( 'LinkedIn', 'so-simple-gallery' ); ?></a></li>
+					<li><a href="https://www.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile"><?php _e( 'LinkedIn', 'so-simple-gallery' ); ?></a></li>
 					<li><a href="https://twitter.com/piethfbos" target="_blank" title="Twitter"><?php _e( 'Twitter: @piethfbos', 'so-simple-gallery' ); ?></a></li>
 					<li><a href="https://github.com/senlin" title="on Github"><?php _e( 'Github', 'so-simple-gallery' ); ?></a></li>
 					<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org"><?php _e( 'WordPress.org Profile', 'so-simple-gallery' ); ?></a></li>
