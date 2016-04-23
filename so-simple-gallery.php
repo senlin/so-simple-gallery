@@ -1,10 +1,10 @@
 <?php
 /* Plugin Name: SO Simple Gallery
- * Plugin URI: http://so-wp.com/?p=115
+ * Plugin URI: https://so-wp.com/?p=115
  * Description: With the SO Simple Gallery plugin you can add a beautiful gallery to your Posts or Pages with a simple shortcode.
  * Author: SO WP
- * Version: 1.2.0
- * Author URI: http://so-wp.com
+ * Version: 1.3.0
+ * Author URI: https://so-wp.com
  * Text Domain: so-simple-gallery
  * Domain Path: /languages
  *
@@ -57,7 +57,7 @@ if ( ! empty ( $GLOBALS['pagenow'] ) && 'plugins.php' === $GLOBALS['pagenow'] )
 
 function sosg_min_wp_version() {
 	global $wp_version;
-	$require_wp = '4.0';
+	$require_wp = '4.4';
 	$update_url = get_admin_url( null, 'update-core.php' );
 
 	$errors = array();
@@ -166,6 +166,7 @@ function sosg_plugin_action_links( $links, $file ) {
  * Add the function for the files that need to be included
  * 
  * @since 2014.5.02
+ * @modified 1.3.0 (2016.4.23) removed Aqua Resizer script
  */
 function sosg_includes() {
 
@@ -175,8 +176,7 @@ function sosg_includes() {
 	if ( is_admin() ) {
 		require_once( 'admin/settings.php' );
 	}
-	/* Load the Aqua Resizer script file. */
-	require_once( 'inc/aq_resizer.php' );
+
 }
 
 /**
@@ -287,27 +287,17 @@ function sosg_shortcode( $atts ) {
 	
 	foreach ( $sosg_gallery as $sosg_image ) {
 	
-	$sosg_thumb = aq_resize( $sosg_image['url'], 75, 75, true );
+		// @modified 1.3.0 (2016.4.23) simplified output to use regular thumbnail (for retina) and srcset
 
-	$url = $sosg_image['full_url'];
-	$width = 800;
-	$height = '';
-	$crop = true;
-	$single = false;
-	$upscale = true;
-	$sosg_big = aq_resize( $url, $width, $height, $crop, $single, $upscale );
+		$sosg_thumb = $sosg_image['url'];
 	
-	$i++;
-	
-	/* Quick Reminder:
-	$sosg_big[0] = url of full image proportionally resized to 800px wide
-	$sosg_big[1] = width in pixels (i.e. 800px)
-	$sosg_big[2] = proportional height in pixels
-	*/
+		$sosg_srcset = $sosg_image['srcset'];
+		
+		$i++;
 	
 	?>
 		
-	<dt><img src="<?php echo $sosg_thumb; ?>" alt="<?php echo $sosg_image['alt']; ?>" width="75" height="75" /></dt><dd class="sosg-image-<?php echo $i; ?>"><img src="<?php echo $sosg_big[0]; ?>" alt="<?php echo $sosg_image['alt']; ?>" width="<?php echo $sosg_big[1]; ?>" height="<?php echo $sosg_big[2]; ?>" /><span class="sosg-image-title"><?php echo $sosg_image['title']; ?></span></dd>
+	<dt><img src="<?php echo $sosg_thumb; ?>" alt="<?php echo esc_attr( $sosg_image['title'] ); ?>" width="75" height="75" /></dt><dd class="sosg-image-<?php echo $i; ?>"><img srcset="<?php echo $sosg_srcset; ?>" alt="<?php echo esc_attr( $sosg_image['title'] ); ?>" /><span class="sosg-image-title"><?php echo esc_attr( $sosg_image['title'] ); ?></span></dd>
 	    
 	<?php } // endforeach
 	

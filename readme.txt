@@ -1,10 +1,10 @@
 === SO Simple Gallery ===
 Contributors: senlin
 Tags: gallery, css, rollover effect,
-Donate link: http://so-wp.com/donations
-Requires at least: 4.0
-Tested up to: 4.4
-Stable tag: 1.2.0
+Donate link: https://so-wp.com/donations
+Requires at least: 4.4
+Tested up to: 4.5
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ The SO Simple Gallery plugin gives you a mini gallery with a beautiful CSS rollo
 
 == Description ==
 
-Inspired by a [LinkedIn discussion](https://www.linkedin.com/groupItem?view=&gid=154024&type=member&item=5867588708181516289) and the [Simple CSS Roll-over Image Gallery tutorial](http://demosthenes.info/blog/58/CSS-and-Images-Simple-Roll-over-Image-Gallery) by [Dudley Storey](http://github.com/dudleystorey) I decided to cook up the concept of it in a plugin.
+Inspired by a [LinkedIn discussion](https://www.linkedin.com/groupItem?view=&gid=154024&type=member&item=5867588708181516289) and the [Simple CSS Roll-over Image Gallery tutorial](http://demosthenes.info/blog/58/CSS-and-Images-Simple-Roll-over-Image-Gallery) by [Dudley Storey](https://github.com/dudleystorey) I decided to cook up the concept of it in a plugin.
 
 It works with a Simple Gallery custom post type to which you can upload a maximum of 8 images using the [Meta Box plugin](http://wordpress.org/plugins/meta-box/). This is my 3rd "extension" for that plugin, which - if you have not yet installed it - will be semi-automatically added to your Plugins folder; just follow the on-screen instructions.
 
@@ -30,7 +30,7 @@ where 123 is the ID of your Simple Gallery.
 
 Please have a look at the "Other Notes" tab to find the Known Limitations.
 
-See [the demo](http://so-wp.com/?p=115) over at SO-WP.com
+See [the demo](https://so-wp.com/?p=115) over at SO-WP.com
 
 == Installation ==
 
@@ -83,6 +83,13 @@ Please open an issue over at [Github](https://github.com/senlin/so-simple-galler
 3. Demo SO Simple Gallery
 
 == Changelog ==
+
+= 1.3.0 (2016.04.23) =
+
+* rewrite shortcode function and implement srcset
+* remove Aqua Resizer script, redundant now
+* adjust minimum version to WP 4.4
+* tested up to WP 4.5
 
 = 1.2.0 (2015.12.17) =
 

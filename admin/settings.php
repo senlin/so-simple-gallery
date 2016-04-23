@@ -51,7 +51,7 @@ function sosg_render_form() { ?>
 			<?php
 			/* Translators: 1 is link to WP Repo */
 			printf( __( 'If you have found this plugin at all useful, please give it a favourable rating in the <a href="%s" title="Rate this plugin!">WordPress Plugin Repository</a>.', 'so-simple-gallery' ), 
-				esc_url( 'http://wordpress.org/support/view/plugin-reviews/so-simple-gallery' )
+				esc_url( 'https://wordpress.org/support/view/plugin-reviews/so-simple-gallery' )
 			);
 			?>
 		</p>
@@ -76,17 +76,15 @@ function sosg_render_form() { ?>
 					<img class="author-image" src="http://www.gravatar.com/avatar/<?php echo md5( 'info@senlinonline.com' ); ?>" />
 					<p>
 						<?php printf( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP Plugins">SO WP Plugins</a>. You can find out more information about me via the following links:', 'so-simple-gallery' ),
-							esc_url( 'http://so-wp.com' )
+							esc_url( 'https://so-wp.com' )
 						); ?>
 					</p>
 				</div> <!-- end .top -->
 				
 				<ul>
-					<li><a href="http://senlinonline.com/" target="_blank" title="Senlin Online"><?php _e( 'Senlin Online', 'so-simple-gallery' ); ?></a></li>
-					<li><a href="http://wpti.ps/" target="_blank" title="WP TIPS"><?php _e( 'WP Tips', 'so-simple-gallery' ); ?></a></li>
-					<li><a href="https://plus.google.com/+PietBos" target="_blank" title="Piet on Google+"><?php _e( 'Google+', 'so-simple-gallery' ); ?></a></li>
+					<li><a href="https://senlinonline.com/" target="_blank" title="Senlin Online"><?php _e( 'Senlin Online', 'so-simple-gallery' ); ?></a></li>
+					<li><a href="https://wpti.ps/" target="_blank" title="WP TIPS"><?php _e( 'WP Tips', 'so-simple-gallery' ); ?></a></li>
 					<li><a href="https://www.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile"><?php _e( 'LinkedIn', 'so-simple-gallery' ); ?></a></li>
-					<li><a href="https://twitter.com/piethfbos" target="_blank" title="Twitter"><?php _e( 'Twitter: @piethfbos', 'so-simple-gallery' ); ?></a></li>
 					<li><a href="https://github.com/senlin" title="on Github"><?php _e( 'Github', 'so-simple-gallery' ); ?></a></li>
 					<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org"><?php _e( 'WordPress.org Profile', 'so-simple-gallery' ); ?></a></li>
 				</ul>

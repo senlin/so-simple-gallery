@@ -2,9 +2,9 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-simple-gallery.svg)](https://wordpress.org/plugins/so-simple-gallery)
 
-###### Last updated on 2015.12.17
-###### requires at least WordPress 4.0
-###### tested up to WordPress 4.4
+###### Last updated on 2016.4.23
+###### requires at least WordPress 4.4
+###### tested up to WordPress 4.5
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-simple-gallery) (via WordPress Plugins Repository)
 ###### [Plugin homepage](http://so-wp.com/?p=115) with Live Demo
@@ -15,7 +15,7 @@ The SO Simple Gallery plugin gives you a mini gallery with a beautiful CSS rollo
 
 Inspired by a [LinkedIn discussion](https://www.linkedin.com/groupItem?view=&gid=154024&type=member&item=5867588708181516289) and the [Simple CSS Roll-over Image Gallery tutorial](http://demosthenes.info/blog/58/CSS-and-Images-Simple-Roll-over-Image-Gallery) by [Dudley Storey](http://github.com/dudleystorey) I decided to cook up the concept of it in a plugin.
 
-It works with a Simple Gallery custom post type to which you can upload a maximum of 8 images using the [Meta Box plugin](http://wordpress.org/plugins/meta-box/). This is my 3rd "extension" for that plugin, which - if you have not yet installed it - will be semi-automatically added to your Plugins folder; just follow the on-screen instructions.
+It works with a Simple Gallery custom post type to which you can upload a maximum of 8 images using the [Meta Box plugin](https://wordpress.org/plugins/meta-box/). This is my 3rd "extension" for that plugin, which - if you have not yet installed it - will be semi-automatically added to your Plugins folder; just follow the on-screen instructions.
 
 Once you have added images to your Simple Gallery you can add it to your Post or Page using a simple shortcode. This shortcode shows after you have published or updated the Simple Gallery. And you can also find the shortcode on the main Simple Galleries screen.
 
@@ -38,7 +38,7 @@ I used a dashicon to add a button to the Visual Editor and therefore you can use
 
 ### Why is the plugin showing an error message after activation?
 
-This plugin is an Extension for the [Meta Box plugin](http://wordpress.org/plugins/meta-box/). If you don't have that installed, this plugin will not work. If you click on the link that shows with the error message you will go to a new page "Required Plugin" to install the Meta Box plugin.
+This plugin is an Extension for the [Meta Box plugin](https://wordpress.org/plugins/meta-box/). If you don't have that installed, this plugin will not work. If you click on the link that shows with the error message you will go to a new page "Required Plugin" to install the Meta Box plugin.
 
 ### I have an issue with this plugin, where can I get support?
 
@@ -65,17 +65,24 @@ This repo is open to _any_ kind of contributions.
 
 ## Donations
 
-* Donate link: http://so-wp.com/donations
+* Donate link: https://so-wp.com/donations
 
 ## Connect with me through
 
 [Github](https://github.com/senlin) 
 
-[WordPress](http://profiles.wordpress.org/senlin/) 
+[WordPress](https://profiles.wordpress.org/senlin/) 
 
-[Website](http://senlinonline.com)
+[Website](https://senlinonline.com)
 
 ## Changelog
+
+### 1.3.0 (2016.4.23)
+
+* rewrite shortcode function and implement srcset
+* remove Aqua Resizer script, redundant now
+* adjust minimum version to WP 4.4
+* tested up to WP 4.5
 
 ### 1.2.0 (2015.12.17)
 
