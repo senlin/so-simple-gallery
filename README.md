@@ -2,6 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-simple-gallery.svg)](https://wordpress.org/plugins/so-simple-gallery)
 
+### May 14, 2016: No longer in active development, use at own risk
+
 ###### Last updated on 2016.4.23
 ###### requires at least WordPress 4.4
 ###### tested up to WordPress 4.5
